@@ -1,0 +1,185 @@
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* reset */
+li{
+    list-style-type: none;
+    text-decoration: none;
+}
+
+
+/* setting */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* color */
+:root{
+    --primary-color: #2495be;
+    --dark-color: #272727;
+    --light-color: #fafafa;
+}
+
+/* default settings */
+html,body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Début en commun */
+.title-h1{
+    font-size: 1.7rem;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    margin-bottom: 25px;
+    color: var(--light-color);
+    /* position:absolute;
+    bottom: 0;*/
+    height: 70px;
+    background: var(--primary-color);
+    line-height: 70px;
+    text-align: center;
+}
+.title-h2{
+    font-size: 1.45rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.title-h3{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.text{
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+/* Fin en commun */
+#root #top{
+    padding: 10px 0;
+    box-shadow: 1px 0px 4px 2px #ddd;
+    background: var(--light-color);
+    color: var(--dark-color);
+}
+.titre{
+    text-align: center;
+}
+.form{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 55%;
+    margin: 0 auto;
+}
+.formbtn{
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+}
+.btnform{
+    padding: 10px 25px;
+    background: var(--primary-color);
+    color: var(--light-color);
+    cursor: pointer;
+    border-radius: 25px;
+    border: none;
+    margin: 0 auto;
+}
+#root{
+    display: flex;
+    height: 100vh;
+}
+#root > div{
+    width: 21%;
+}
+#root #list{
+    background: var(--light-color);
+    color: var(--dark-color);
+    height: 100%;
+    overflow-y: auto;
+}
+#root #map{
+    flex-grow: 1;
+}
+
+.card{
+    border-bottom: 1px solid rgba(221, 221, 221, 0.176);
+    display: list-item;
+    padding: 15px;
+    line-height: 2.3;
+    cursor: pointer;
+}
+
+.card:last-child{
+    border-bottom: none;
+}
+.box_head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.others-info{
+    padding: 3px;
+    color: rgba(23, 23, 23, 0.5);
+
+}
+.others-info li{
+    font-size: 0.8rem;
+    margin-bottom: 15px;
+
+    display: flex;
+    /* border-left: 4px solid rgba(231, 231, 231, 0.053);
+    display: list-item; */
+}
+.others-info li div{
+    width: 21%;
+}
+.others-info li div:first-child{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.others-info li div:first-child span{
+    display: block;
+    height: 45px;
+    width: 45px;
+    border-radius: 25px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.others-info li div:first-child span i{
+    font-size: 2rem;
+}
+.others-info li div:last-child{
+    flex-grow: 1;
+}
+.others-info li div:first-child .span2{
+    display: block;
+    font-size: 0.5rem;
+    text-align: center;
+
+    color: rgba(31, 30, 30, 0.469);
+
+}
+
+.others-info li div:first-child .span2 i{
+    font-size: 0.4rem;
+}
+.others-info{
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 400ms ease-in;
+}
+.is_active .others-info{
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
